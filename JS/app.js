@@ -28,7 +28,7 @@ form.addEventListener('submit', function(e) {
     login.innerHTML = `<b>Login ID: </b>${data.login}`;
 
     let bio = document.getElementById('bio');
-    bio.innerHTML = `<b>Bio: </b>${data.bio == null ? 'User hasn\'t set a bio :(' : data.bio}`;
+    bio.innerHTML = `<b>Bio: </b>${data.bio == null ? 'Bio not found' : data.bio}`;
 
     let followers = document.getElementById('followers');
     followers.innerHTML = `<b>Followers: </b>${data.followers}`;

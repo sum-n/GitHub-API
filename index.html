@@ -13,9 +13,12 @@
       <h1 style="text-align: left;">
         GitHub REST API
       </h1>
-      <br><form id="my-form" autocomplete="off" novalidate="novalidate">
+      <form id="my-form" autocomplete="off" novalidate="novalidate">
         <div class="form-group">
-          <input type="text" name="username" id="search" placeholder="Search Username" required)>
+          <p id="enter_username">Username</p>
+          <input type="text" name="username" id="search" placeholder="Enter Username" required)>
+          <p id="enter_token">Token</p>
+          <input type="text" name="token" id="search" placeholder="Optional" optional)>
         </div>
         <div class="form-group">
           <button class="btn">Search</button>
@@ -30,6 +33,9 @@
         <p id="following"></p>
         <p id="public_repos"></p>
         <p id="location"></p>
+    </div>
+    <div class="repo_info">
+      <p id="repo"></p>
     </div>
 </body>
 

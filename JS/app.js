@@ -3,7 +3,6 @@ var loadingElement = document.querySelector('#result');
 loadingElement.style.display = 'none';
 form.addEventListener('submit', function(e) {
 	e.preventDefault()
-
 	var search = document.getElementById("search").value
 
 	document.getElementById("result").innerHTML = ""
@@ -18,31 +17,30 @@ form.addEventListener('submit', function(e) {
 		loadingElement.style.display = '';
 
 	//Displaying the user information
-	let image = document.getElementById("result");
-	image.innerHTML = `<a target="_blank" href="https://github.com/${search}"> <img src="${data.avatar_url}"/></a>`
+	var image = document.getElementById("result");
+	image.innerHTML = `<a target="_blank" href="https://api.github.com/${search}"> <img src="${data.avatar_url}"/></a>`
 	
-    let name = document.getElementById('name');
+    var name = document.getElementById('name');
     name.innerHTML = `<b>Name: </b>${data.name}`;
 
-    let login = document.getElementById('login');
+    var login = document.getElementById('login');
     login.innerHTML = `<b>Login ID: </b>${data.login}`;
 
-    let bio = document.getElementById('bio');
+    var bio = document.getElementById('bio');
     bio.innerHTML = `<b>Bio: </b>${data.bio == null ? 'Bio not found' : data.bio}`;
 
-    let followers = document.getElementById('followers');
+    var followers = document.getElementById('followers');
     followers.innerHTML = `<b>Followers: </b>${data.followers}`;
 
-    let following = document.getElementById('following');
+    var following = document.getElementById('following');
 	following.innerHTML = `<b>Following: </b>${data.following}`;
 	
-	let public_repos = document.getElementById('public_repos');
+	var public_repos = document.getElementById('public_repos');
 	public_repos.innerHTML = `<b>Public Repos: </b>${data.public_repos}`;
 
-    let location = document.getElementById('location');
-    location.innerHTML = `<b>Location: </b>${data.location}`
+    var location = document.getElementById('location');
+	location.innerHTML = `<b>Location: </b>${data.location}`
 	
 })
-
 
 })

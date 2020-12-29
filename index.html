@@ -6,24 +6,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GitHub Access</title>
   <link rel="stylesheet" href="CSS/styles.css">
+  <!-- Load d3.js -->
+  <script src="https://d3js.org/d3.v4.js"></script>
+  <!-- Color scale -->
+  <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 </head>
 
 <body>
     <div class= "container">
-      <h1 style="text-align: left;">
-        GitHub REST API
-      </h1>
+      <h1 style="text-align: left;"> GitHub REST API </h1>
       <form id="my-form" autocomplete="off" novalidate="novalidate">
+
         <div class="form-group">
           <p id="enter_username">Username</p>
-          <input type="text" name="username" id="search" placeholder="Enter Username" required)>
+          <input type="text" name="username" id="search" required)>
+
           <p id="enter_token">Token</p>
           <input type="text" name="token" id="search" placeholder="Optional" optional)>
         </div>
+        
         <div class="form-group">
           <button class="btn">Search</button>
         </div>
       </form>
+
       <div class= "info">
         <p id="result" src=''></p>
         <p id="name"></p> 
@@ -33,11 +39,28 @@
         <p id="following"></p>
         <p id="public_repos"></p>
         <p id="location"></p>
+
+        <div class="visuals">
+          <div class="vis-lang">
+              <div class="lang">
+                <canvas id="language"></canvas>
+              </div>
+          </div>
+          <div class="vis-comm">
+              <div class="comm">
+                <canvas id="commits"></canvas>
+              </div>
+          </div>
+        </div>
+
     </div>
+
     <div class="repo_info">
       <p id="repo"></p>
     </div>
+
 </body>
 
 <script src="JS/app.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
 </html>

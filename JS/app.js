@@ -1,6 +1,7 @@
 var form = document.getElementById("my-form")
 var loadingElement = document.querySelector('#result');
-loadingElement.style.display = 'none';
+
+
 form.addEventListener('submit', function(e) {
 	e.preventDefault()
 	var search = document.getElementById("search").value
@@ -41,6 +42,7 @@ form.addEventListener('submit', function(e) {
     var location = document.getElementById('location');
 	location.innerHTML = `<b>Location: </b>${data.location}`
 	
+
 })
 
 })

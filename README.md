@@ -1,2 +1,3 @@
 # GitHub-API
-https://sum-n.github.io/GitHub-API/
+
+![Usage](Demo/GitHubDemo.gif)

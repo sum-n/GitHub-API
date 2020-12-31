@@ -1,66 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GitHub Visualization</title>
-  <link rel="stylesheet" href="CSS/styles.css">
-  <!-- Load d3.js -->
-  <script src="https://d3js.org/d3.v4.js"></script>
-  <!-- Color scale -->
-  <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Demo/pie_api.png">
+    <title>GitHub Visualization</title>
+    <link rel="stylesheet" href="CSS/styles.css">
 </head>
-
 <body>
-    <div class= "container">
-      <h1 style="text-align: left;"> GitHub REST API </h1>
-      <form id="my-form" autocomplete="off" novalidate="novalidate">
-
-        <div class="form-group">
-          <p id="enter_username">Username</p>
-          <input type="text" name="username" id="search" required)>
-
-          <p id="enter_token">Token</p>
-          <input type="text" name="token" id="search" placeholder="Optional" optional)>
-        </div>
+    <div>
+        <h1 style="text-align: left"> GitHub REST API </h1>
+        <form id="my-form" autocomplete="off" novalidate="novalidate"></form>
         
-        <div class="form-group">
-          <button class="btn">Search</button>
+            <div class="info"> 
+                <p id="enter_username">Username</p> 
+                <input id="user" type="text" name="username" id="search" required)>
+
+                <p id="enter_token">Token</p> 
+                <input id="token" type="text" placeholder="Optional" name="token" id="search"><br>
+                <br><button id="button"  onclick="handleInput()">Submit </button>
+            </div>
+        <div>
+            <div>
+                <div>
+                    <br><img class="image" id="img" src=''>
+                    <p id="name"></p>
+                    <p id="login"></p>
+                    <p id="bio"></p>
+                    <p id="following"></p>                    
+                    <p id="followers"></p>
+                    <p id="public_repos"></p>
+                    <p id="location"></p><br><br>
+                    <p id="data"></p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <p><canvas id="language" width="800" height="600"></canvas></p><br>
+                </div>
+                <p id="data2"></p>
+                <div>
+                    <p><canvas id="commits" width="800" height="600"></canvas></p>
+                </div>
+            </div>
         </div>
-      </form>
-
-      <div class= "info">
-        <p id="result" src=''></p>
-        <p id="name"></p> 
-        <p id="login"></p>
-        <p id="bio"></p>
-        <p id="followers"></p>
-        <p id="following"></p>
-        <p id="public_repos"></p>
-        <p id="location"></p>
-
-        <div class="visuals">
-          <div class="vis-lang">
-              <div class="lang">
-                <canvas id="language"></canvas>
-              </div>
-          </div>
-          <div class="vis-comm">
-              <div class="comm">
-                <canvas id="commits"></canvas>
-              </div>
-          </div>
-        </div>
-
     </div>
-
-    <div class="repo_info">
-      <p id="repo"></p>
-    </div>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+    <script src="JS/app.js" defer></script>
 </body>
-
-<script src="JS/app.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
 </html>

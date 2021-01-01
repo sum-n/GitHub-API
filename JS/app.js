@@ -1,6 +1,6 @@
 function handleInput() {
-    var user = document.getElementById("user").value !== "" ? document.getElementById("user").value : 'sum-n';
-    var token = document.getElementById("token").value !== "" ? document.getElementById("token").value : undefined;
+    var user = document.getElementById("user").value;
+    var token = document.getElementById("token").value;
     if (doughnutChart1 != null) doughnutChart1.destroy();
     if (lineChart2 != null) lineChart2.destroy();
     main(user, token); 
